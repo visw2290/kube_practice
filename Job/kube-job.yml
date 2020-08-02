@@ -1,0 +1,19 @@
+apiVersion : batch/v1
+kind : Job
+metadata :
+    name : kube-batch
+spec :
+    completions : 2
+    parallelism : 2
+    backoffLimit : 4
+    template :
+        metadata :
+            labels :
+                app : batchjob
+        spec :
+            activeDeadlineSeconds : 180
+            restartPolicy : OnFailure
+            containers :
+                -
+                    name : batchcon
+                    image : luksa/batch-job

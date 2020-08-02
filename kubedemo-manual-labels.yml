@@ -1,0 +1,16 @@
+apiVersion : v1
+kind : Pod
+metadata :
+    name : kubetest-v2
+    labels :
+        creation_method : manual
+        env : prod
+spec :
+    containers :
+        -
+            name : kubedemo-v2
+            image : luksa/kubia
+            ports :
+                -
+                    containerPort : 8080
+                    protocol : TCP

@@ -1,0 +1,19 @@
+apiVersion : apps/v1beta2
+kind : DaemonSet
+metadata :
+    name : kube-ds
+spec :
+    selector :
+        matchLabels :
+            app : ssdkubia
+    template :
+        metadata :
+            labels :
+                app : ssdkubia
+        spec :
+            nodeSelector :
+                disk : ssd
+            containers :
+                -
+                    name : kdaemon
+                    image : luksa/ssd-monitor

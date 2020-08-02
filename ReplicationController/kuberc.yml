@@ -1,0 +1,21 @@
+apiVersion : v1
+kind : ReplicationController
+metadata :
+    name : kubiarc
+spec :
+    replicas : 2
+    selector : 
+        app : kubia
+    template :
+        metadata : 
+            labels :
+                app : kubia
+        spec :
+            containers :
+                -
+                    name : kubia-rcc
+                    image : luksa/kubia
+                    ports :
+                        -
+                            containerPort : 8080
+                            protocol : TCP
