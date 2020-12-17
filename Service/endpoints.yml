@@ -4,7 +4,6 @@ metadata :
     name : external-service
 subsets :
   -  addresses :
-     -  ip : 11.11.11.11
-     -  ip : 22.22.22.22
+     -  ip : 216.58.197.46
      ports :
        - port : 80

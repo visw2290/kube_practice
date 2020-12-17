@@ -19,5 +19,5 @@ spec :
     -  name : html
        gitRepo :
          repository : https://github.com/visw2290/kubia-website-example.git
-         revision :
+         revision : master
          directory : .
